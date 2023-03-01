@@ -28,7 +28,7 @@ const Navbar = () => {
           onClick={() => setToggle(prev => !prev)}
         />
         <div>
-          <ul className={`${toggle ? 'flex' : 'hidden'} shadow-2xl flex-col gap-5 capitalize font-semibold absolute top-20 right-0  p-5 h-80`}>
+          <ul className={`${toggle ? 'flex' : 'hidden'} shadow-2xl flex-col gap-5 capitalize font-semibold absolute top-20 right-0  p-5 h-80 bg-white`}>
             <NavLink to="/habitaciones">habitaciones</NavLink>
             <NavLink to="/about">sobre nosotros</NavLink>
             <NavLink to="/contacto">contáctanos</NavLink>
