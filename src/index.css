@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #589827;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
+}
+
+.main-color {
+  background-color: var(--primary);
 }
