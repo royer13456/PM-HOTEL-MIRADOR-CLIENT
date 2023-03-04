@@ -8,8 +8,8 @@ const RoomCard = (room: Room) => {
 
   const navigate = useNavigate();
 
-  const reserve = () => {
-    navigate('/reserve');
+  const reserve = (room: Room) => {
+    navigate(`/reserve/${room.id}`);
   }
 
   return (
@@ -23,7 +23,7 @@ const RoomCard = (room: Room) => {
         <p>Descripcion:</p>
         {descriptionList.map(description => <li>{description}</li>)}
       </div>
-      <button className="main-color text-white w-full py-2 rounded-lg" onClick={reserve}>Reservar</button>
+      <button className="main-color text-white w-full py-2 rounded-lg" onClick={() => reserve(room)}>Reservar</button>
     </div>
   )
 }
