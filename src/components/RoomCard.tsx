@@ -14,7 +14,7 @@ const RoomCard = (room: Room) => {
 
   return (
     <div className="border w-11/12 m-auto p-5 rounded-xl flex flex-col gap-3">
-      <img src={image_url} alt={title} />
+      <img src={image_url} alt={title} loading="lazy" />
       <div className="flex justify-between">
         <p className="capitalize">{title}</p>
         <b>S/{price}</b>

@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="container flex justify-between items-center md:p-5 md:px-0 px-3 py-2">
       <div>
-        <NavLink to="/"><img src={logo} alt="" width={80} /></NavLink>
+        <NavLink to="/"><img src={logo} alt="logo" className="w-16 md:w-20 rounded-md" /></NavLink>
       </div>
 
 
