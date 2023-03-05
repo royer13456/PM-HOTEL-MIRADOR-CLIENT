@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import NotFound from './components/NotFound';
 import RoomPage from './pages/RoomPage';
 import ContactUsPage from './pages/ContactUsPage';
+import Reserve from './components/Reserve';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path='/habitaciones' element={<RoomPage />} />
         <Route path='/contacto' element={<ContactUsPage />} />
+        <Route path='/reserve/:id' element={<Reserve />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
