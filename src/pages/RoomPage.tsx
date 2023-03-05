@@ -3,13 +3,13 @@ import RoomCard from "../components/RoomCard"
 import { Room } from "../interface"
 
 const RoomPage = () => {
-  const [rooms, setRooms] = useState([])
+  const [rooms, setRooms] = useState<Room[]>([])
 
   useEffect(() => {
     const getRooms = async () => {
       const response = await fetch('http://localhost:3000/api/room');
-      const data = await response.json();
-      setRooms(data);
+      const rooms = await response.json();
+      setRooms(rooms);
     }
     getRooms();
   }, [])
