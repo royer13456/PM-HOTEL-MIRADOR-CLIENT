@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <>
+    <div className='pb-10'>
       <img className='w-full h-auto m-auto' src="/about-hero.png" alt="hero" />
       <div className='grid w-10/12 m-auto mt-5 gap-5'>
         <section className='flex flex-col-reverse lg:flex-row lg:gap-16'>
@@ -37,7 +37,7 @@ const About = () => {
           <img className='w-fullh h-auto m-auto' src="/about04.png" alt="about04" />
         </section>
       </div >
-    </>
+    </div>
   )
 }
 

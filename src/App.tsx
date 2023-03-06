@@ -6,6 +6,7 @@ import RoomPage from './pages/RoomPage';
 import ContactUsPage from './pages/ContactUsPage';
 import Reserve from './components/Reserve';
 import About from './pages/About';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/reserve/:id' element={<Reserve />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
