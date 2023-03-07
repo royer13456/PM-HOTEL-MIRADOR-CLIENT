@@ -5,6 +5,8 @@ import NotFound from './components/NotFound';
 import RoomPage from './pages/RoomPage';
 import ContactUsPage from './pages/ContactUsPage';
 import Reserve from './components/Reserve';
+import About from './pages/About';
+
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
 
       <Routes>
         <Route path='/habitaciones' element={<RoomPage />} />
+        <Route path='/about' element={<About />} />
         <Route path='/contacto' element={<ContactUsPage />} />
         <Route path='/reserve/:id' element={<Reserve />} />
         <Route path='*' element={<NotFound />} />
