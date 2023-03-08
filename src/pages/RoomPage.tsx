@@ -14,10 +14,12 @@ const RoomPage = () => {
     getRooms();
   }, [])
 
+  if (rooms.length === 0) return <>No se encontraron habitaciones</>
+
   return (
     <div className="container grid md:grid-cols-3 justify-between">
       {
-        rooms.map((room: Room) => <RoomCard key={room.id} {...room} />)
+        rooms.map((room: Room) => <RoomCard {...room} key={room.id} />)
       }
     </div>
   )

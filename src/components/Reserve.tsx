@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { Room } from '../interface';
 
@@ -23,27 +23,32 @@ const Reserve = () => {
     <div>
       {
         room.map(item => (
-          <div key={item.id}>
-            <img src={item.image_url} alt="" />
-            <div>{item.title}</div>
-
+          <div key={item.id} className='flex flex-col gap-5'>
             <div>
-              <h2>su reserva:</h2>
-              <form>
-                <label htmlFor="">Fecha y hora</label>
-                <input type="datetime-local" name="" id="" />
-                <b>Datos del huesped</b>
+              <img src={item.image_url} alt="" />
+              <div className='capitalize text-2xl font-semibold'>{item.title}</div>
+            </div>
+
+            <div className='w-10/12 m-auto p-3'>
+              <h2 className='uppercase font-bold'>su reserva:</h2>
+              <form className='flex flex-col gap-4'>
+                <label htmlFor="">
+                  <p>Fecha y hora</p>
+                  <input type="datetime-local" name="" id="" />
+                </label>
+                <p className='uppercase font-bold'>Datos del huesped</p>
                 <label htmlFor="">
                   <p>Nombre y Apellido</p>
-                  <input type="text" name="" id="" />
+                  <input className='border border-black w-full' type="text" name="" id="" />
                 </label>
+
                 <label htmlFor="">
                   <p>Email</p>
-                  <input type="email" name="" id="" />
+                  <input className='border border-black w-full' type="email" name="" id="" />
                 </label>
                 <label htmlFor="">
                   <p>Celular</p>
-                  <input type="tel" name="" id="" />
+                  <input className='border border-black w-full' type="tel" name="" id="" />
                 </label>
                 <label htmlFor="">
                   <p>Elije un método de pago</p>
@@ -55,7 +60,7 @@ const Reserve = () => {
                       value=""
                       name="bordered-radio"
                       className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                    <label htmlFor="bordered-radio-1" className="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+                    <label htmlFor="bordered-radio-1" className="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pago en línea</label>
                   </div>
                   <div className="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700">
                     <input
@@ -65,15 +70,15 @@ const Reserve = () => {
                       value=""
                       name="bordered-radio"
                       className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                    <label htmlFor="bordered-radio-2" className="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+                    <label htmlFor="bordered-radio-2" className="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pago en caja</label>
                   </div>
 
                 </label>
-                <div>
+                <div className='flex justify-between'>
                   <p>Monto</p>
-                  <p>S/ {item.price}</p>
+                  <b>S/ {item.price}</b>
                 </div>
-                <button>Reservar y pagar</button>
+                <button className='main-color w-full text-white py-2 rounded-lg'>Reservar y pagar</button>
               </form>
             </div>
           </div>
