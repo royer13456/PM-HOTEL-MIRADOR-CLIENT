@@ -7,6 +7,7 @@ import ContactUsPage from './pages/ContactUsPage';
 import Reserve from './components/Reserve';
 import About from './pages/About';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='/contacto' element={<ContactUsPage />} />
         <Route path='/reserve/:id' element={<Reserve />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

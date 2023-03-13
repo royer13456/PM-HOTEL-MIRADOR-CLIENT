@@ -5,8 +5,8 @@ const About = () => {
     <div className='pb-10'>
       <img className='w-full h-auto m-auto' src="/about-hero.png" alt="hero" />
       <div className='grid w-10/12 m-auto mt-5 gap-5'>
-        <section className='flex flex-col-reverse lg:flex-row lg:gap-16'>
-          <img className='w-fullh h-auto m-auto' src="/about01.png" alt="about01" />
+        <section className='flex flex-col-reverse lg:flex-row lg:gap-16 border-'>
+          <img className='w-fullh h-auto m-auto' src="09" alt="about01" />
           <div className='flex flex-col gap-5 lg:-mt-16 lg:bg-white lg:p-5'>
             <h2 className='font-bold '>SOBRE NOSOTROS</h2>
             <div>
