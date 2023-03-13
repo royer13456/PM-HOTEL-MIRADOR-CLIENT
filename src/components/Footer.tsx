@@ -2,11 +2,11 @@ import logo from '/logo.jpg';
 
 const Footer = () => {
   return (
-    <div className='grid items-center md:grid-cols-3 bg-zinc-900 text-white py-5 m-auto text-center'>
+    <div className='grid items-center py-5 m-auto text-center text-white md:grid-cols-3 bg-zinc-900'>
 
       <section className='flex flex-col gap-3'>
-        <img src={logo} alt="logo" className='w-16 md:w-20 rounded-md m-auto' />
-        <div className='m-auto flex gap-3'>
+        <img src={logo} alt="logo" className='w-16 m-auto rounded-md md:w-20' />
+        <div className='flex gap-3 m-auto'>
           <a href="#"><img src="/socials/facebook.svg" alt="facebook" className='w-6' /></a>
           <a href="#"><img src="/socials/twitter.svg" alt="twitter" className='w-6' /></a>
           <a href="#"><img src="/socials/instagram.svg" alt="instagram" className='w-6' /></a>
@@ -20,8 +20,8 @@ const Footer = () => {
       </section>
 
       <section>
-        <h3 className='text-lg mb-3'>Libro de reclamaciones</h3>
-        <a href="#"><img src="/book.svg" alt="libro de reclamaciones" className='w-14 invert m-auto' /></a>
+        <h3 className='mb-3 text-lg'>Libro de reclamaciones</h3>
+        <a href="#"><img src="/book.svg" alt="libro de reclamaciones" className='m-auto w-14 invert' /></a>
       </section>
     </div>
   )

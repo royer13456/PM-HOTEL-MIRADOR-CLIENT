@@ -17,7 +17,7 @@ const RoomPage = () => {
   if (rooms.length === 0) return <>No se encontraron habitaciones</>
 
   return (
-    <div className="container grid md:grid-cols-3 justify-between">
+    <div className="container grid justify-between md:grid-cols-3">
       {
         rooms.map((room: Room) => <RoomCard {...room} key={room.id} />)
       }

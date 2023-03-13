@@ -13,7 +13,7 @@ const RoomCard = (room: Room) => {
   }
 
   return (
-    <div className="border w-11/12 m-auto p-5 rounded-xl flex flex-col gap-3">
+    <div className="flex flex-col w-11/12 gap-3 p-5 m-auto border rounded-xl">
       <img src={image_url} alt={title} loading="lazy" />
       <div className="flex justify-between">
         <p className="capitalize">{title}</p>
@@ -23,7 +23,7 @@ const RoomCard = (room: Room) => {
         <p>Descripcion:</p>
         {descriptionList.map(description => <li>{description}</li>)}
       </div>
-      <button className="main-color text-white w-full py-2 rounded-lg" onClick={() => reserve(room)}>Reservar</button>
+      <button className="w-full py-2 text-white rounded-lg main-color" onClick={() => reserve(room)}>Reservar</button>
     </div>
   )
 }
